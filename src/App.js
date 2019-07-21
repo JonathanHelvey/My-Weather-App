@@ -3,8 +3,7 @@ import logo from "./logo.svg";
 import WeatherApi from "./components/WeatherApi";
 import Form from "./components/form";
 import "./App.css";
-
-const API_KEY = "3b6cea41c9de8924a1930a20c2986956";
+import API_KEY from "./secrets";
 
 class App extends React.Component {
   state = {

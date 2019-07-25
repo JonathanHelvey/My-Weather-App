@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import logo from "./logo.svg";
 import WeatherApi from "./components/WeatherApi";
 import Form from "./components/form";
+import Titles from "./components/Titles";
 import "./App.css";
 import API_KEY from "./secrets";
 
@@ -36,17 +37,28 @@ class App extends React.Component {
   };
   render() {
     return (
-      <div>
-        <h1>My-Weather-App</h1>
-        <Form getWeather={this.getWeather} />
-        <WeatherApi
-          temperature={this.state.temperature}
-          city={this.state.city}
-          country={this.state.country}
-          humidity={this.state.humidity}
-          description={this.state.description}
-          error={this.state.error}
-        />
+      <div className="wrapper">
+        <div className="main">
+          <div className="container">
+            <div className="row">
+              <div className="col-x-5">
+                <Titles />
+              </div>
+              <div className="col-xs-7 form-cotainer">
+                <h1>My-Weather-App</h1>
+                <Form getWeather={this.getWeather} />
+                <WeatherApi
+                  temperature={this.state.temperature}
+                  city={this.state.city}
+                  country={this.state.country}
+                  humidity={this.state.humidity}
+                  description={this.state.description}
+                  error={this.state.error}
+                />
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     );
   }

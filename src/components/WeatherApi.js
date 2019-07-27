@@ -42,7 +42,7 @@ const Weather = props => (
         Conditions:
         <span className="weather__value">
           {" "}
-          {props.description.toUpperCase()}{" "}
+          {props.description.toUpperCase()}
         </span>
       </p>
     )}
